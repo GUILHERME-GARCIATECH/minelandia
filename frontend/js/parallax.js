@@ -1,7 +1,22 @@
-const hero = document.querySelector(".hero");
+const bg = document.querySelector(".hero-bg");
 
-window.addEventListener("scroll", () => {
+let ticking = false;
+
+function update() {
   const scrollY = window.scrollY;
 
-  hero.style.setProperty("--parallax-y", `${scrollY * 0.18}px`);
+  if (scrollY <= window.innerHeight * 1.5) {
+    bg.style.transform = `
+      translate3d(-50%, ${scrollY * 0.18}px, 0)
+    `;
+  }
+
+  ticking = false;
+}
+
+window.addEventListener("scroll", () => {
+  if (!ticking) {
+    requestAnimationFrame(update);
+    ticking = true;
+  }
 });

@@ -34,7 +34,7 @@ a {
   color: inherit;
 }
 
-/* Navbar */
+/* NAVBAR */
 
 .navbar {
   position: fixed;
@@ -44,18 +44,17 @@ a {
 
   width: min(92%, 1380px);
   height: 82px;
-  padding: 0 22px;
+  padding: 0 26px 0 34px;
 
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  gap: 28px;
+  gap: 32px;
 
   z-index: 1000;
 
-  background: rgba(13, 20, 20, 0.82);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
+  background: rgba(9, 18, 18, 0.82);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
 
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 999px;
@@ -65,36 +64,43 @@ a {
     inset 0 1px 0 rgba(255, 255, 255, 0.06);
 }
 
+/* LOGO */
+
 .logo {
   display: flex;
   align-items: center;
-  gap: 14px;
+  gap: 18px;
+  min-width: 360px;
   flex-shrink: 0;
 }
 
 .logo-frame {
-  width: 68px;
-  height: 68px;
-  border-radius: 50%;
+  width: 108px;
+  height: 108px;
 
   display: flex;
   align-items: center;
   justify-content: center;
 
-  background: rgba(255, 255, 255, 0.04);
-  border: 1px solid rgba(241, 210, 122, 0.28);
-  overflow: hidden;
+  flex-shrink: 0;
 
-  box-shadow:
-    0 0 0 4px rgba(0, 0, 0, 0.18),
-    0 0 20px rgba(212, 175, 55, 0.14);
+  margin-top: 8px;
+  margin-left: -10px;
+
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  overflow: visible;
+
+  z-index: 2;
 }
 
 .logo-img {
-  width: 76px;
-  height: 76px;
+  width: 108px;
+  height: 108px;
   object-fit: contain;
   display: block;
+  filter: drop-shadow(0 14px 18px rgba(0, 0, 0, 0.65));
 }
 
 .logo-text {
@@ -105,7 +111,7 @@ a {
 
 .logo-text strong {
   font-size: 1rem;
-  letter-spacing: 5px;
+  letter-spacing: 6px;
   color: #f5f1df;
 }
 
@@ -115,16 +121,18 @@ a {
   color: rgba(255, 255, 255, 0.58);
 }
 
+/* MENU */
+
 .navbar nav {
   display: flex;
   align-items: center;
-  justify-content: flex-end;
-  gap: 10px;
+  justify-content: center;
+  gap: 12px;
   margin-left: auto;
 }
 
 .navbar nav a {
-  padding: 10px 15px;
+  padding: 10px 16px;
   border-radius: 999px;
 
   font-size: 0.95rem;
@@ -139,10 +147,12 @@ a {
   background: rgba(255, 255, 255, 0.07);
 }
 
+/* DISCORD */
+
 .discord-button {
   flex-shrink: 0;
 
-  padding: 12px 22px;
+  padding: 12px 24px;
   border-radius: 999px;
 
   background: linear-gradient(135deg, #6670ff, #4f5be8);
@@ -159,43 +169,69 @@ a {
   transform: translateY(-2px);
   box-shadow: 0 12px 28px rgba(88, 101, 242, 0.4);
 }
-/* Hero */
+
+/* HERO */
 
 .hero {
-  min-height: 100vh;
+  min-height: 110vh;
   display: grid;
   grid-template-columns: 1.2fr 0.8fr;
   align-items: center;
-  padding: 140px 8% 70px;
+  padding: 160px 8% 260px;
   gap: 50px;
 
   position: relative;
   overflow: hidden;
-  background: #081113;
+  isolation: isolate;
+  background: var(--bluish-black);
 }
-.hero::before {
-  content: "";
+
+/* IMAGEM DO HERO */
+
+.hero-bg {
   position: absolute;
-  inset: -20px;
+  top: -5px;
+  left: 50%;
 
-  background-image: url("../assets/images/hero-home-minecraft.png");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  width: 110%;
+  min-height: 125vh;
+  height: auto;
+  object-fit: cover;
 
-  filter: blur(4px);
-  transform: scale(1.06) translateY(var(--parallax-y, 0px));
-  z-index: 0;
+  transform: translate3d(-50%, 0, 0);
+  z-index: -3;
+
+  filter: brightness(0.92) contrast(1.05);
+
+  will-change: transform;
+  pointer-events: none;
+  user-select: none;
 }
+
+/* OVERLAY + TRANSIÇÃO PARA FEATURES */
 
 .hero::after {
   content: "";
   position: absolute;
   inset: 0;
+
   background:
-    linear-gradient(90deg, rgba(8, 17, 19, 0.9), rgba(8, 17, 19, 0.45)),
-    linear-gradient(180deg, rgba(8, 17, 19, 0.15), rgba(8, 17, 19, 0.95));
-  z-index: 1;
+    linear-gradient(
+      90deg,
+      rgba(3, 10, 11, 0.55) 0%,
+      rgba(3, 10, 11, 0.25) 50%,
+      rgba(3, 10, 11, 0.45) 100%
+    ),
+    linear-gradient(
+      180deg,
+      rgba(13, 27, 30, 0) 0%,
+      rgba(13, 27, 30, 0.18) 48%,
+      rgba(13, 27, 30, 0.55) 72%,
+      rgba(13, 27, 30, 0.86) 88%,
+      var(--bluish-black) 100%
+    );
+
+  z-index: -2;
 }
 
 .hero-content,
@@ -278,16 +314,18 @@ a {
   color: var(--light-golden);
 }
 
-/* Status */
+/* STATUS */
 
 .status-panel {
   background: rgba(26, 26, 26, 0.55);
   backdrop-filter: blur(12px);
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 24px;
+
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 15px;
+
   padding: 18px;
 }
 
@@ -334,14 +372,28 @@ a {
   font-size: 1.5rem;
 }
 
-/* Features */
+/* FEATURES */
 
 .features {
+  position: relative;
+  z-index: 3;
+
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 28px;
-  padding: 90px 8%;
-  background-color: var(--bluish-black);
+
+  margin-top: -330px;
+  padding: 360px 8% 100px;
+
+  background: linear-gradient(
+    180deg,
+    rgba(13, 27, 30, 0) 0%,
+    rgba(13, 27, 30, 0.18) 20%,
+    rgba(13, 27, 30, 0.45) 40%,
+    rgba(13, 27, 30, 0.78) 62%,
+    var(--bluish-black) 82%,
+    var(--bluish-black) 100%
+  );
 }
 
 .card {
@@ -387,15 +439,21 @@ a {
   font-size: 0.95rem;
 }
 
-/* Preview */
+/* PREVIEW */
 
 .preview {
-  padding: 90px 8%;
+  padding: 100px 8%;
   display: grid;
   grid-template-columns: 1.2fr 0.8fr;
   gap: 32px;
   align-items: center;
-  background: linear-gradient(180deg, var(--bluish-black), #081113);
+
+  background: linear-gradient(
+    180deg,
+    var(--bluish-black) 0%,
+    #0b181b 45%,
+    #081113 100%
+  );
 }
 
 .window-grid {
@@ -475,7 +533,7 @@ a {
   font-size: 2rem;
 }
 
-/* News */
+/* NEWS */
 
 .news {
   padding: 90px 8%;
@@ -506,7 +564,7 @@ a {
   gap: 25px;
 }
 
-/* Responsivo */
+/* RESPONSIVO */
 
 @media (max-width: 850px) {
   .navbar {
@@ -533,5 +591,29 @@ a {
 
   .discord-button {
     padding: 9px 14px;
+  }
+
+  .hero {
+    grid-template-columns: 1fr;
+    padding: 150px 8% 100px;
+  }
+
+  .hero-bg {
+    width: 145%;
+    min-height: 115vh;
+  }
+
+  .status-panel {
+    grid-template-columns: 1fr;
+  }
+
+  .event-card {
+    grid-column: span 1;
+  }
+
+  .features,
+  .preview,
+  .news-grid {
+    grid-template-columns: 1fr;
   }
 }
