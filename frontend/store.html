@@ -1,41 +1,181 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>LOJA | MineLandia</title>
+  <title>LOJA | MineLandia</title>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Montserrat:wght@300;400;700&display=swap"
-        rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Montserrat:wght@300;400;700&display=swap"
+    rel="stylesheet" />
 
-    <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/style.css" />
 </head>
 
 <body>
+  <header class="navbar">
+    <div class="logo-frame">
+      <img src="assets/icons/icone.png" alt="Logo MineLandia" class="logo-img" />
+    </div>
+    <div class="logo-text">
+      <strong>MINELANDIA</strong>
+      <span>Reino Medieval</span>
+    </div>
 
-    <header class="navbar">
-        <div class="logo-frame">
-            <img src="assets/icons/icone.png" alt="Logo MineLandia" class="logo-img">
-        </div>
-        <div class="logo-text">
-            <strong>MINELANDIA</strong>
-            <span>Reino Medieval</span>
-        </div>
+    <nav>
+      <a href="home.html">Home</a>
+      <a href="shop.html" class="active">Loja</a>
+      <a href="ranking.html">Ranking</a>
+    </nav>
 
-        <nav>
-            <a href="home.html">Home</a>
-            <a href="shop.html" class="active">Loja</a>
-            <a href="ranking.html">Ranking</a>
-        </nav>
+    <a href="https://discord.com" target="_blank" class="discord-button">Discord</a>
+  </header>
 
-        <a href="https://discord.com" target="_blank" class="discord-button">Discord</a>
-    </header>
+  <main class="store">
+    <!-- HERO DA LOJA -->
+    <section class="store-hero">
+      <div class="store-hero-content">
+        <span class="tag"></span>
+        <h1>MineLandia Store</h1>
+        <p>
+          Apoie o servidor e desbloqueie vantagens exclusivas dentro do reino.
+        </p>
+      </div>
+    </section>
 
+    <!-- RANKS -->
+    <section class="store-section">
+      <div class="section-title">
+        <h2>SEJA UM PLAYER VIP</h2>
+      </div>
+
+      <div class="store-grid">
+        <article class="store-card">
+          <img src="assets/elements/pergaminho.png" alt="" />
+          <h3>VIP</h3>
+          <p>Benefícios iniciais do reino</p>
+          <span class="price">R$ 9,90</span>
+          <button class="btn-buy" onclick="openModal('vip')">Comprar</button>
+          <button class="btn-buy" onclick="addToCart('vip')">Adcionar ao Carrinho</button>
+        </article>
+
+        <article class="store-card">
+          <img src="assets/icons/vipplus.png" alt="" />
+          <h3>VIP+</h3>
+          <p>Mais vantagens e comandos</p>
+          <span class="price">R$ 19,90</span>
+          <button class="btn-buy" onclick="openModal('vipplus')">Comprar</button>
+          <button class="btn-buy" onclick="addToCart('vipplus')">Adcionar ao Carrinho</button>
+        </article>
+
+        <article class="store-card">
+          <img src="assets/icons/mvp.png" alt="" />
+          <h3>MVP</h3>
+          <p>Rank avançado do servidor</p>
+          <span class="price">R$ 29,90</span>
+          <button class="btn-buy" onclick="openModal('mvp')">Comprar</button>
+          <button class="btn-buy" onclick="addToCart('mvp')">Adcionar ao Carrinho</button>
+        </article>
+
+        <article class="store-card highlight">
+          <img src="assets/icons/mvpplus.png" alt="" />
+          <h3>MVP+</h3>
+          <p>Elite do reino</p>
+          <span class="price">R$ 49,90</span>
+          <button class="btn-buy" onclick="openModal('mvpplus')">Comprar</button>
+          <button class="btn-buy" onclick="addToCart('mvpplus')">Adcionar ao Carrinho</button>
+        </article>
+      </div>
+    </section>
+
+    <!-- CASH -->
+    <section class="store-section">
+      <div class="section-title">
+        <span>CASH</span>
+        <h2>Moeda do reino</h2>
+      </div>
+
+      <div class="store-grid">
+        <article class="store-card">
+          <h3>1.000 Cash</h3>
+          <p>Pequeno impulso econômico</p>
+          <span class="price">R$ 5,00</span>
+          <button class="btn-buy" onclick="openModal('umkCash')">
+            Comprar
+          </button>
+        </article>
+
+        <article class="store-card">
+          <h3>5.000 Cash</h3>
+          <p>Bom para evoluir rápido</p>
+          <span class="price">R$ 20,00</span>
+          <button class="btn-buy" onclick="openModal('cincokCash')">
+            Comprar
+          </button>
+        </article>
+
+        <article class="store-card highlight">
+          <h3>10.000 Cash</h3>
+          <p>Domine a economia</p>
+          <span class="price">R$ 35,00</span>
+          <button class="btn-buy" onclick="openModal('dezkCash')">
+            Comprar
+          </button>
+        </article>
+      </div>
+    </section>
+
+    <!-- SERVIÇOS -->
+    <section class="store-section">
+      <div class="section-title">
+        <span>SERVIÇOS</span>
+        <h2>Apoio e suporte do reino</h2>
+      </div>
+
+      <div class="store-grid">
+        <article class="store-card warning">
+          <h3>UNBAN</h3>
+          <p>Solicitação de revisão manual</p>
+          <span class="price">R$ 25,00</span>
+          <button class="btn-buy">Solicitar</button>
+        </article>
+        <article class="store-card warning">
+          <h3>RESET</h3>
+          <p>Restart da conta</p>
+          <span class="price">R$ 5,00</span>
+          <button class="btn-buy">Solicitar</button>
+        </article>
+        <article class="store-card warning">
+          <h3>VOAR</h3>
+          <p>Comprar /fly</p>
+          <span class="price">R$ 5,00</span>
+          <button class="btn-buy">Solicitar</button>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <div id="modal" class="modal">
+    <div class="modal-box">
+      <h2 id="nome"></h2>
+      <p id="descricao"></p>
+
+      <span id="preco"></span>
+
+      <div class="modal-actions">
+        <button class="btn-cart" onclick="addToCart()">
+          Adicionar ao carrinho
+        </button>
+        <button class="btn-close" onclick="closeModal()">Fechar</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/store.js" defer></script>
 </body>
 
 </html>

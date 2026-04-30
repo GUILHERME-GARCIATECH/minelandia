@@ -46,3 +46,7 @@ function renderHome(data) {
 }
 
 renderHome(serverData);
+
+document.querySelector(".btn-copiar").addEventListener("click", () => {
+  navigator.clipboard.writeText("SEU-IP-AQUI");
+});
