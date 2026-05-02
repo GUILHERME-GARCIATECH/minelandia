@@ -1,22 +1,31 @@
-const bg = document.querySelector(".hero-bg");
+const heroBackground = document.querySelector(".hero-bg");
 
-let ticking = false;
+let parallaxTicking = false;
 
-function update() {
-  const scrollY = window.scrollY;
-
-  if (scrollY <= window.innerHeight * 1.5) {
-    bg.style.transform = `
-      translate3d(-50%, ${scrollY * 0.18}px, 0)
-    `;
+function updateHeroParallax() {
+  if (!heroBackground) {
+    return;
   }
 
-  ticking = false;
+  const scrollY = window.scrollY;
+  const maxParallaxDistance = window.innerHeight * 1.5;
+
+  if (scrollY <= maxParallaxDistance) {
+    heroBackground.style.transform = `translate3d(-50%, ${scrollY * 0.18}px, 0)`;
+  }
+
+  parallaxTicking = false;
 }
 
-window.addEventListener("scroll", () => {
-  if (!ticking) {
-    requestAnimationFrame(update);
-    ticking = true;
-  }
-});
+if (heroBackground) {
+  window.addEventListener(
+    "scroll",
+    () => {
+      if (!parallaxTicking) {
+        requestAnimationFrame(updateHeroParallax);
+        parallaxTicking = true;
+      }
+    },
+    { passive: true }
+  );
+}

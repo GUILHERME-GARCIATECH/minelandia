@@ -1,11 +1,11 @@
 <!doctype html>
-<html lang="en">
+<html lang="pt-BR">
 
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>LOJA | MineLandia</title>
+  <title>Loja | MineLandia</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -18,17 +18,19 @@
 
 <body>
   <header class="navbar">
-    <div class="logo-frame">
-      <img src="assets/icons/icone.png" alt="Logo MineLandia" class="logo-img" />
-    </div>
-    <div class="logo-text">
-      <strong>MINELANDIA</strong>
-      <span>Reino Medieval</span>
-    </div>
+    <a class="logo-link" href="home.html" aria-label="MineLandia - pagina inicial">
+      <div class="logo-frame">
+        <img src="assets/icons/icone.png" alt="Logo MineLandia" class="logo-img" />
+      </div>
+      <div class="logo-text">
+        <strong>MINELANDIA</strong>
+        <span>RankUp Medieval</span>
+      </div>
+    </a>
 
     <nav>
       <a href="home.html">Home</a>
-      <a href="shop.html" class="active">Loja</a>
+      <a href="store.html" class="active">Loja</a>
       <a href="ranking.html">Ranking</a>
     </nav>
 
@@ -36,145 +38,350 @@
   </header>
 
   <main class="store">
-    <!-- HERO DA LOJA -->
     <section class="store-hero">
       <div class="store-hero-content">
-        <span class="tag"></span>
-        <h1>MineLandia Store</h1>
+        <span class="tag">LOJA OFICIAL DO REINO</span>
+        <h1>Loja MineLandia</h1>
         <p>
-          Apoie o servidor e desbloqueie vantagens exclusivas dentro do reino.
+          Apoie o servidor, fortaleça sua jornada medieval e receba vantagens
+          exclusivas para evoluir dentro do reino.
         </p>
+        <div class="store-hero-badges" aria-label="Informações da loja">
+          <span>Compra segura</span>
+          <span>Entrega após confirmação</span>
+          <span>Suporte via Discord</span>
+        </div>
       </div>
     </section>
 
-    <!-- RANKS -->
-    <section class="store-section">
-      <div class="section-title">
-        <h2>SEJA UM PLAYER VIP</h2>
+    <div class="store-layout">
+      <div class="store-catalog">
+        <section class="store-section" aria-labelledby="vips-title">
+          <div class="section-title">
+            <span>VIPs</span>
+            <h2 id="vips-title">Vantagens no reino</h2>
+          </div>
+
+          <div class="store-grid">
+            <article class="store-card">
+              <img src="assets/elements/pergaminho.png" alt="" class="product-icon" />
+              <span class="product-category-label">VIP</span>
+              <h3>VIP</h3>
+              <p>Benefícios iniciais para começar com mais conforto no reino.</p>
+              <ul class="benefit-list">
+                <li>Kit VIP semanal</li>
+                <li>Tag exclusiva no chat</li>
+                <li>Comandos básicos extras</li>
+              </ul>
+              <span class="price">R$ 9,90</span>
+              <div class="product-actions">
+                <button class="btn-secondary" type="button" data-product-id="vip" data-action="open-product">
+                  Ver detalhes
+                </button>
+                <button class="btn-buy" type="button" data-product-id="vip" data-action="add-to-cart">
+                  Adicionar ao carrinho
+                </button>
+              </div>
+            </article>
+
+            <article class="store-card">
+              <img src="assets/elements/chest.png" alt="" class="product-icon" />
+              <span class="product-category-label">VIP</span>
+              <h3>VIP+</h3>
+              <p>Mais comandos e recompensas para acelerar sua progressão.</p>
+              <ul class="benefit-list">
+                <li>Kit VIP+ semanal</li>
+                <li>Homes adicionais</li>
+                <li>Bônus de cash inicial</li>
+              </ul>
+              <span class="price">R$ 19,90</span>
+              <div class="product-actions">
+                <button class="btn-secondary" type="button" data-product-id="vipplus" data-action="open-product">
+                  Ver detalhes
+                </button>
+                <button class="btn-buy" type="button" data-product-id="vipplus" data-action="add-to-cart">
+                  Adicionar ao carrinho
+                </button>
+              </div>
+            </article>
+
+            <article class="store-card">
+              <img src="assets/elements/golden-block.png" alt="" class="product-icon" />
+              <span class="product-category-label">VIP</span>
+              <h3>MVP</h3>
+              <p>Rank avançado para jogadores que querem dominar a temporada.</p>
+              <ul class="benefit-list">
+                <li>Kit MVP reforçado</li>
+                <li>Prioridade em eventos</li>
+                <li>Comandos de conveniência</li>
+              </ul>
+              <span class="price">R$ 29,90</span>
+              <div class="product-actions">
+                <button class="btn-secondary" type="button" data-product-id="mvp" data-action="open-product">
+                  Ver detalhes
+                </button>
+                <button class="btn-buy" type="button" data-product-id="mvp" data-action="add-to-cart">
+                  Adicionar ao carrinho
+                </button>
+              </div>
+            </article>
+
+            <article class="store-card highlight">
+              <img src="assets/elements/crown.png" alt="" class="product-icon" />
+              <span class="product-category-label">Mais popular</span>
+              <h3>MVP+</h3>
+              <p>O pacote de elite para quem quer todos os privilégios do reino.</p>
+              <ul class="benefit-list">
+                <li>Kit MVP+ premium</li>
+                <li>Maior destaque visual</li>
+                <li>Benefícios máximos ativos</li>
+              </ul>
+              <span class="price">R$ 49,90</span>
+              <div class="product-actions">
+                <button class="btn-secondary" type="button" data-product-id="mvpplus" data-action="open-product">
+                  Ver detalhes
+                </button>
+                <button class="btn-buy" type="button" data-product-id="mvpplus" data-action="add-to-cart">
+                  Adicionar ao carrinho
+                </button>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section class="store-section" aria-labelledby="cash-title">
+          <div class="section-title">
+            <span>Cash</span>
+            <h2 id="cash-title">Moeda do reino</h2>
+          </div>
+
+          <div class="store-grid store-grid-compact">
+            <article class="store-card">
+              <img src="assets/elements/orb.png" alt="" class="product-icon" />
+              <span class="product-category-label">Cash</span>
+              <h3>1.000 Cash</h3>
+              <p>Um impulso rápido para pequenas compras e melhorias.</p>
+              <ul class="benefit-list">
+                <li>Crédito em conta</li>
+                <li>Uso livre na economia</li>
+                <li>Entrega automática futura</li>
+              </ul>
+              <span class="price">R$ 5,00</span>
+              <div class="product-actions">
+                <button class="btn-secondary" type="button" data-product-id="cash-1000" data-action="open-product">
+                  Ver detalhes
+                </button>
+                <button class="btn-buy" type="button" data-product-id="cash-1000" data-action="add-to-cart">
+                  Adicionar ao carrinho
+                </button>
+              </div>
+            </article>
+
+            <article class="store-card">
+              <img src="assets/elements/chest.png" alt="" class="product-icon" />
+              <span class="product-category-label">Cash</span>
+              <h3>5.000 Cash</h3>
+              <p>Boa reserva para evoluir equipamentos, terrenos e recursos.</p>
+              <ul class="benefit-list">
+                <li>Melhor custo por cash</li>
+                <li>Ideal para evolução</li>
+                <li>Saldo pronto para loja</li>
+              </ul>
+              <span class="price">R$ 20,00</span>
+              <div class="product-actions">
+                <button class="btn-secondary" type="button" data-product-id="cash-5000" data-action="open-product">
+                  Ver detalhes
+                </button>
+                <button class="btn-buy" type="button" data-product-id="cash-5000" data-action="add-to-cart">
+                  Adicionar ao carrinho
+                </button>
+              </div>
+            </article>
+
+            <article class="store-card highlight">
+              <img src="assets/elements/golden-block.png" alt="" class="product-icon" />
+              <span class="product-category-label">Cash</span>
+              <h3>10.000 Cash</h3>
+              <p>Pacote robusto para dominar a economia da temporada.</p>
+              <ul class="benefit-list">
+                <li>Maior economia</li>
+                <li>Perfeito para clãs</li>
+                <li>Mais liberdade de compra</li>
+              </ul>
+              <span class="price">R$ 35,00</span>
+              <div class="product-actions">
+                <button class="btn-secondary" type="button" data-product-id="cash-10000" data-action="open-product">
+                  Ver detalhes
+                </button>
+                <button class="btn-buy" type="button" data-product-id="cash-10000" data-action="add-to-cart">
+                  Adicionar ao carrinho
+                </button>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section class="store-section" aria-labelledby="services-title">
+          <div class="section-title">
+            <span>Serviços</span>
+            <h2 id="services-title">Apoio e suporte</h2>
+          </div>
+
+          <div class="store-grid store-grid-compact">
+            <article class="store-card warning">
+              <img src="assets/elements/enxanted-table.png" alt="" class="product-icon" />
+              <span class="product-category-label">Serviço</span>
+              <h3>Unban</h3>
+              <p>Solicitação de revisão manual para retorno ao servidor.</p>
+              <ul class="benefit-list">
+                <li>Análise da equipe</li>
+                <li>Resposta via suporte</li>
+                <li>Processo manual</li>
+              </ul>
+              <span class="price">R$ 25,00</span>
+              <div class="product-actions">
+                <button class="btn-secondary" type="button" data-product-id="unban" data-action="open-product">
+                  Ver detalhes
+                </button>
+                <button class="btn-buy" type="button" data-product-id="unban" data-action="add-to-cart">
+                  Adicionar ao carrinho
+                </button>
+              </div>
+            </article>
+
+            <article class="store-card warning">
+              <img src="assets/elements/block.png" alt="" class="product-icon" />
+              <span class="product-category-label">Serviço</span>
+              <h3>Reset</h3>
+              <p>Reinício de dados específicos da conta mediante solicitação.</p>
+              <ul class="benefit-list">
+                <li>Atendimento individual</li>
+                <li>Revisão antes da execução</li>
+                <li>Confirmação no Discord</li>
+              </ul>
+              <span class="price">R$ 5,00</span>
+              <div class="product-actions">
+                <button class="btn-secondary" type="button" data-product-id="reset" data-action="open-product">
+                  Ver detalhes
+                </button>
+                <button class="btn-buy" type="button" data-product-id="reset" data-action="add-to-cart">
+                  Adicionar ao carrinho
+                </button>
+              </div>
+            </article>
+
+            <article class="store-card warning">
+              <img src="assets/elements/orb.png" alt="" class="product-icon" />
+              <span class="product-category-label">Serviço</span>
+              <h3>Voar</h3>
+              <p>Permissão de voo para construir e explorar com mais liberdade.</p>
+              <ul class="benefit-list">
+                <li>Permissão /fly</li>
+                <li>Ideal para builds</li>
+                <li>Ativação após confirmação</li>
+              </ul>
+              <span class="price">R$ 5,00</span>
+              <div class="product-actions">
+                <button class="btn-secondary" type="button" data-product-id="fly" data-action="open-product">
+                  Ver detalhes
+                </button>
+                <button class="btn-buy" type="button" data-product-id="fly" data-action="add-to-cart">
+                  Adicionar ao carrinho
+                </button>
+              </div>
+            </article>
+          </div>
+        </section>
       </div>
 
-      <div class="store-grid">
-        <article class="store-card">
-          <img src="assets/elements/pergaminho.png" alt="" />
-          <h3>VIP</h3>
-          <p>Benefícios iniciais do reino</p>
-          <span class="price">R$ 9,90</span>
-          <button class="btn-buy" onclick="openModal('vip')">Comprar</button>
-          <button class="btn-buy" onclick="addToCart('vip')">Adcionar ao Carrinho</button>
-        </article>
+      <aside id="cart-panel" class="cart-panel" aria-labelledby="cart-title">
+        <div class="cart-header">
+          <span class="tag">Carrinho</span>
+          <h2 id="cart-title">Resumo do pedido</h2>
+        </div>
 
-        <article class="store-card">
-          <img src="assets/icons/vipplus.png" alt="" />
-          <h3>VIP+</h3>
-          <p>Mais vantagens e comandos</p>
-          <span class="price">R$ 19,90</span>
-          <button class="btn-buy" onclick="openModal('vipplus')">Comprar</button>
-          <button class="btn-buy" onclick="addToCart('vipplus')">Adcionar ao Carrinho</button>
-        </article>
+        <div id="cart-items" class="cart-items" aria-live="polite"></div>
+        <p id="cart-empty-message" class="cart-empty-message">
+          Seu carrinho está vazio. Escolha um item da loja para começar.
+        </p>
 
-        <article class="store-card">
-          <img src="assets/icons/mvp.png" alt="" />
-          <h3>MVP</h3>
-          <p>Rank avançado do servidor</p>
-          <span class="price">R$ 29,90</span>
-          <button class="btn-buy" onclick="openModal('mvp')">Comprar</button>
-          <button class="btn-buy" onclick="addToCart('mvp')">Adcionar ao Carrinho</button>
-        </article>
+        <div class="cart-totals">
+          <div>
+            <span>Subtotal</span>
+            <strong id="cart-subtotal">R$ 0,00</strong>
+          </div>
+          <div>
+            <span>Total</span>
+            <strong id="cart-total">R$ 0,00</strong>
+          </div>
+        </div>
 
-        <article class="store-card highlight">
-          <img src="assets/icons/mvpplus.png" alt="" />
-          <h3>MVP+</h3>
-          <p>Elite do reino</p>
-          <span class="price">R$ 49,90</span>
-          <button class="btn-buy" onclick="openModal('mvpplus')">Comprar</button>
-          <button class="btn-buy" onclick="addToCart('mvpplus')">Adcionar ao Carrinho</button>
-        </article>
-      </div>
-    </section>
-
-    <!-- CASH -->
-    <section class="store-section">
-      <div class="section-title">
-        <span>CASH</span>
-        <h2>Moeda do reino</h2>
-      </div>
-
-      <div class="store-grid">
-        <article class="store-card">
-          <h3>1.000 Cash</h3>
-          <p>Pequeno impulso econômico</p>
-          <span class="price">R$ 5,00</span>
-          <button class="btn-buy" onclick="openModal('umkCash')">
-            Comprar
-          </button>
-        </article>
-
-        <article class="store-card">
-          <h3>5.000 Cash</h3>
-          <p>Bom para evoluir rápido</p>
-          <span class="price">R$ 20,00</span>
-          <button class="btn-buy" onclick="openModal('cincokCash')">
-            Comprar
-          </button>
-        </article>
-
-        <article class="store-card highlight">
-          <h3>10.000 Cash</h3>
-          <p>Domine a economia</p>
-          <span class="price">R$ 35,00</span>
-          <button class="btn-buy" onclick="openModal('dezkCash')">
-            Comprar
-          </button>
-        </article>
-      </div>
-    </section>
-
-    <!-- SERVIÇOS -->
-    <section class="store-section">
-      <div class="section-title">
-        <span>SERVIÇOS</span>
-        <h2>Apoio e suporte do reino</h2>
-      </div>
-
-      <div class="store-grid">
-        <article class="store-card warning">
-          <h3>UNBAN</h3>
-          <p>Solicitação de revisão manual</p>
-          <span class="price">R$ 25,00</span>
-          <button class="btn-buy">Solicitar</button>
-        </article>
-        <article class="store-card warning">
-          <h3>RESET</h3>
-          <p>Restart da conta</p>
-          <span class="price">R$ 5,00</span>
-          <button class="btn-buy">Solicitar</button>
-        </article>
-        <article class="store-card warning">
-          <h3>VOAR</h3>
-          <p>Comprar /fly</p>
-          <span class="price">R$ 5,00</span>
-          <button class="btn-buy">Solicitar</button>
-        </article>
-      </div>
-    </section>
+        <div class="cart-actions">
+          <button class="btn-secondary" type="button" data-action="clear-cart">Limpar carrinho</button>
+          <a class="btn-buy checkout-button" href="checkout.html">Finalizar compra</a>
+        </div>
+      </aside>
+    </div>
   </main>
 
-  <div id="modal" class="modal">
-    <div class="modal-box">
-      <h2 id="nome"></h2>
-      <p id="descricao"></p>
+  <div id="product-modal" class="modal" aria-hidden="true" role="dialog" aria-labelledby="modal-product-name">
+    <div class="modal-box" role="document">
+      <button class="modal-close" type="button" data-action="close-product" aria-label="Fechar modal">×</button>
 
-      <span id="preco"></span>
+      <span class="tag">Detalhes do produto</span>
+      <h2 id="modal-product-name"></h2>
+      <p id="modal-product-description"></p>
+      <span id="modal-product-price" class="modal-price"></span>
+
+      <ul id="modal-product-benefits" class="benefit-list modal-benefits"></ul>
 
       <div class="modal-actions">
-        <button class="btn-cart" onclick="addToCart()">
+        <button id="modal-add-cart" class="btn-secondary" type="button" data-action="add-to-cart">
           Adicionar ao carrinho
         </button>
-        <button class="btn-close" onclick="closeModal()">Fechar</button>
+        <button id="modal-buy-now" class="btn-buy" type="button" data-action="buy-now">
+          Comprar agora
+        </button>
       </div>
     </div>
   </div>
 
+  <footer class="site-footer">
+    <div class="footer-content">
+      <div class="footer-brand">
+        <strong>MINELANDIA</strong>
+        <span>Reino Medieval</span>
+        <p>
+          Servidor Minecraft rankup medieval feito para divers&atilde;o, cl&atilde;s,
+          economia e eventos.
+        </p>
+      </div>
+
+      <nav class="footer-nav" aria-label="Links do rodape">
+        <h3>Navega&ccedil;&atilde;o</h3>
+        <ul>
+          <li><a href="home.html">In&iacute;cio</a></li>
+          <li><a href="store.html">Loja</a></li>
+          <li><a href="ranking.html">Ranking</a></li>
+        </ul>
+      </nav>
+
+      <div class="footer-support">
+        <h3>Comunidade</h3>
+        <ul>
+          <li><a href="https://discord.com" target="_blank" rel="noopener noreferrer">Suporte via Discord</a></li>
+          <li><a href="store.html">Visite nossa loja</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2026 MineLandia. Todos os direitos reservados.</p>
+      <p>Projeto independente, n&atilde;o afiliado &agrave; Mojang ou Microsoft.</p>
+    </div>
+  </footer>
+
+  <script src="js/util.js" defer></script>
   <script src="js/store.js" defer></script>
 </body>
 

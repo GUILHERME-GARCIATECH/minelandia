@@ -18,81 +18,82 @@
 
 <body>
   <header class="navbar">
-    <div class="logo-frame">
-      <img src="assets/icons/icone.png" alt="Logo MineLandia" class="logo-img">
-    </div>
-    <div class="logo-text">
-      <strong>MINELANDIA</strong>
-      <span>Reino Medieval</span>
-    </div>
+    <a class="logo-link" href="home.html" aria-label="MineLandia - pagina inicial">
+      <div class="logo-frame">
+        <img src="assets/icons/icone.png" alt="Logo MineLandia" class="logo-img" />
+      </div>
+      <div class="logo-text">
+        <strong>MINELANDIA</strong>
+        <span>RankUp Medieval</span>
+      </div>
+    </a>
 
-    <nav>
-      <a href="home.html" class="active">Home</a>
+    <nav aria-label="Navegacao principal">
+      <a href="home.html" class="active" aria-current="page">Home</a>
       <a href="store.html">Loja</a>
       <a href="ranking.html">Ranking</a>
     </nav>
 
-    <a href="https://discord.com" target="_blank" class="discord-button">
+    <a href="https://discord.com" target="_blank" rel="noopener noreferrer" class="discord-button">
       Discord
     </a>
   </header>
 
-  <main>
-    <section id="home" class="hero">
-      <img src="assets/images/hero-home-minecraft.png" alt="hero-bg" class="hero-bg">
-      <div class="hero-content">
-        <span class="tag">MEDIEVAL MINECRAFT • TEMPORADA ATIVA</span>
+  <main id="main-content">
+    <section id="home" class="hero" aria-labelledby="home-title">
+      <img src="assets/images/hero-home-minecraft.png" alt="" class="hero-bg" aria-hidden="true" />
 
-        <h1>MineLandia</h1>
-        <h2>O reino onde cada bloco conta uma história</h2>
+      <div class="hero-content">
+        <span class="tag">MEDIEVAL MINECRAFT &bull; TEMPORADA ATIVA</span>
+
+        <h1 id="home-title">MineLandia</h1>
+        <h2>O reino onde cada bloco conta uma hist&oacute;ria</h2>
 
         <p>
-          Entre em uma aventura medieval com ranks, clãs, economia, eventos
-          sazonais e batalhas épicas pelo domínio do reino.
+          Entre em uma aventura medieval com ranks, cl&atilde;s, economia, eventos
+          sazonais e batalhas &eacute;picas pelo dom&iacute;nio do reino.
         </p>
 
         <div class="hero-button">
-          <button class="btn-copiar">Copiar IP</button>
-          <a href="shop.html" class="btn-store">Ver Loja</a>
+          <button class="btn-copiar" type="button" data-copy-ip="SEU-IP-AQUI">Copiar IP</button>
+          <a href="store.html" class="btn-store">Ver Loja</a>
         </div>
       </div>
 
-      <aside class="status-panel">
-        <div class="status-card">
+      <aside class="status-panel" aria-label="Status do servidor">
+        <article class="status-card">
           <span>ONLINE AGORA</span>
           <div id="players-online">--</div>
-        </div>
+        </article>
 
-        <div class="status-card">
+        <article class="status-card">
           <span>TEMPORADA ATUAL</span>
           <div id="current-season">carregando...</div>
           <p id="season-description"></p>
-        </div>
+        </article>
 
-        <div class="event-card">
-          <div>
-            <span>PRÓXIMO GRANDE EVENTO</span>
-            <h3 id="next-event-title">carregando...</h3>
-            <p id="next-event-decription"></p>
-          </div>
-        </div>
+        <article class="event-card">
+          <span>PR&Oacute;XIMO GRANDE EVENTO</span>
+          <h3 id="next-event-title">carregando...</h3>
+          <p id="next-event-description"></p>
+        </article>
       </aside>
     </section>
 
-    <section class="features">
+    <section class="features" aria-label="Destaques do servidor">
       <article class="card">
-        <span>PROGRESSÃO VIVA</span>
-        <h3>Gameplay que evolui como você</h3>
+        <span>PROGRESS&Atilde;O VIVA</span>
+        <h3>Gameplay que evolui como voc&ecirc;</h3>
         <p>
           Evolua de rank, participe das temporadas e ganhe itens exclusivos.
         </p>
       </article>
 
       <article class="card">
-        <span>FAÇA ALIADOS</span>
-        <h3>Crie e participe de clãs</h3>
+        <span>FA&Ccedil;A ALIADOS</span>
+        <h3>Crie e participe de cl&atilde;s</h3>
         <p>
-          Entre para um clã e batalhe ao lado de quem você mais confia.
+          Entre para um cl&atilde; e batalhe ao lado de quem voc&ecirc; mais confia.
         </p>
       </article>
 
@@ -100,33 +101,33 @@
         <span>DOMINE O REINO</span>
         <h3>Fique rico e poderoso</h3>
         <p>
-          Minere, faça mega farms, entre em batalhas, trabalhe com máquinas
+          Minere, fa&ccedil;a mega farms, entre em batalhas, trabalhe com m&aacute;quinas
           ou spawners. Escolha sua forma de enriquecer.
         </p>
       </article>
     </section>
 
-    <section class="preview">
+    <section class="preview" aria-labelledby="preview-title">
       <div class="window-grid">
-        <div class="window-dots">
+        <div class="window-dots" aria-hidden="true">
           <span></span>
           <span></span>
           <span></span>
         </div>
 
         <div class="preview-content">
-          <span>PRÉVIA DO REINO</span>
-          <h2>Um mundo medieval feito para conquistar</h2>
+          <span>PR&Eacute;VIA DO REINO</span>
+          <h2 id="preview-title">Um mundo medieval feito para conquistar</h2>
           <p>
-            Explore castelos, minas, vilas, arenas e territórios dominados
-            por clãs.
+            Explore castelos, minas, vilas, arenas e territ&oacute;rios dominados
+            por cl&atilde;s.
           </p>
         </div>
       </div>
 
-      <div class="stats">
+      <div class="stats" aria-label="Estatisticas do servidor">
         <article>
-          <span>Clãs ativos</span>
+          <span>Cl&atilde;s ativos</span>
           <div class="active-clans">--</div>
         </article>
 
@@ -142,10 +143,10 @@
       </div>
     </section>
 
-    <section class="news">
+    <section class="news" aria-labelledby="news-title">
       <div class="section-title">
         <span>NOVIDADES</span>
-        <h2>Últimas notícias do reino</h2>
+        <h2 id="news-title">&Uacute;ltimas not&iacute;cias do reino</h2>
       </div>
 
       <div class="news-grid">
@@ -153,13 +154,13 @@
           <span>NOVA TEMPORADA</span>
           <h3>O Rei de Neve despertou</h3>
           <p>
-            Explore áreas congeladas, enfrente mobs especiais e colete itens
+            Explore &aacute;reas congeladas, enfrente mobs especiais e colete itens
             raros da temporada.
           </p>
         </article>
 
         <article class="card">
-          <span>EVENTO DE CLÃS</span>
+          <span>EVENTO DE CL&Atilde;S</span>
           <h3>Cerco ao Castelo</h3>
           <p>
             Monte sua equipe, invada fortalezas inimigas e lute pelo controle
@@ -171,15 +172,51 @@
           <span>ECONOMIA</span>
           <h3>Novas formas de enriquecer</h3>
           <p>
-            Máquinas, spawners, farms e mineração foram balanceados para deixar
-            a progressão mais divertida.
+            M&aacute;quinas, spawners, farms e minera&ccedil;&atilde;o foram balanceados
+            para deixar a progress&atilde;o mais divertida.
           </p>
         </article>
       </div>
     </section>
   </main>
-  <script src="js/parallax.js"></script>
-  <script src="js/home.js"></script>
+
+  <footer class="site-footer">
+    <div class="footer-content">
+      <div class="footer-brand">
+        <strong>MINELANDIA</strong>
+        <span>Reino Medieval</span>
+        <p>
+          Servidor Minecraft rankup medieval feito para divers&atilde;o, cl&atilde;s,
+          economia e eventos.
+        </p>
+      </div>
+
+      <nav class="footer-nav" aria-label="Links do rodape">
+        <h3>Navega&ccedil;&atilde;o</h3>
+        <ul>
+          <li><a href="home.html">In&iacute;cio</a></li>
+          <li><a href="store.html">Loja</a></li>
+          <li><a href="ranking.html">Ranking</a></li>
+        </ul>
+      </nav>
+
+      <div class="footer-support">
+        <h3>Comunidade</h3>
+        <ul>
+          <li><a href="https://discord.com" target="_blank" rel="noopener noreferrer">Suporte via Discord</a></li>
+          <li><a href="store.html">Visite nossa loja</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2026 MineLandia. Todos os direitos reservados.</p>
+      <p>Projeto independente, n&atilde;o afiliado &agrave; Mojang ou Microsoft.</p>
+    </div>
+  </footer>
+
+  <script src="js/parallax.js" defer></script>
+  <script src="js/home.js" defer></script>
 </body>
 
 </html>

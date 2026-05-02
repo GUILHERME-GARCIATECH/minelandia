@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Finalizar compra | MineLandia</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Montserrat:wght@300;400;700&display=swap"
+    rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+  <header class="navbar">
+    <div class="logo-frame">
+      <img src="assets/icons/icone.png" alt="Logo MineLandia" class="logo-img" />
+    </div>
+    <div class="logo-text">
+      <strong>MINELANDIA</strong>
+      <span>Reino Medieval</span>
+    </div>
+
+    <nav>
+      <a href="home.html">Home</a>
+      <a href="store.html">Loja</a>
+      <a href="ranking.html">Ranking</a>
+    </nav>
+
+    <a href="https://discord.com" target="_blank" class="discord-button">Discord</a>
+  </header>
+
+  <main class="checkout-page">
+    <section class="checkout-hero">
+      <span class="tag">Pedido do reino</span>
+      <h1>Finalizar compra</h1>
+      <p>
+        Revise os itens escolhidos, informe seus dados de jogador e selecione o
+        método de pagamento para confirmar o pedido.
+      </p>
+    </section>
+
+    <section class="checkout-layout" aria-label="Finalização de pedido">
+      <aside class="order-summary" aria-labelledby="order-summary-title">
+        <div class="section-title">
+          <span>Resumo</span>
+          <h2 id="order-summary-title">Resumo do pedido</h2>
+        </div>
+
+        <div id="checkout-items" class="checkout-items" aria-live="polite">
+          <p class="cart-empty-message">Nenhum item carregado no checkout.</p>
+        </div>
+
+        <div class="cart-totals checkout-totals">
+          <div>
+            <span>Subtotal</span>
+            <strong id="checkout-subtotal">R$ 0,00</strong>
+          </div>
+          <div>
+            <span>Total</span>
+            <strong id="checkout-total">R$ 0,00</strong>
+          </div>
+        </div>
+
+        <div class="checkout-warning">
+          Os itens serão entregues após confirmação do pagamento.
+        </div>
+      </aside>
+
+      <form class="checkout-form" action="#" method="post">
+        <div class="section-title">
+          <span>Dados</span>
+          <h2>Dados do jogador</h2>
+        </div>
+
+        <div class="form-grid">
+          <label for="player-nick">
+            Nick do Minecraft
+            <input id="player-nick" name="player-nick" type="text" autocomplete="nickname" required />
+          </label>
+
+          <label for="customer-name">
+            Nome
+            <input id="customer-name" name="customer-name" type="text" autocomplete="name" required />
+          </label>
+
+          <label for="customer-email">
+            E-mail
+            <input id="customer-email" name="customer-email" type="email" autocomplete="email" required />
+          </label>
+
+          <label for="customer-discord">
+            Discord opcional
+            <input id="customer-discord" name="customer-discord" type="text" placeholder="usuario#0000" />
+          </label>
+        </div>
+
+        <label class="payment-field" for="payment-method">
+          Método de pagamento
+          <select id="payment-method" name="payment-method" required>
+            <option value="pix">Pix</option>
+            <option value="card">Cartão</option>
+          </select>
+        </label>
+
+        <button id="confirm-order" class="btn-buy confirm-order-button" type="submit">
+          Confirmar pedido
+        </button>
+      </form>
+    </section>
+  </main>
+  <script src="js/util.js" defer></script>
+  <script src="js/checkout.js" defer></script>
+</body>
+
+</html>
